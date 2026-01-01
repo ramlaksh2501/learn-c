@@ -1,0 +1,10 @@
+//print the sum of the two digit numbers whose one's digit is equal to 5
+#include<stdio.h>
+int main(){
+    int x=10;int s=0;
+    for (x;x<100;x++){
+       if(x%10==5){s+=x;}
+    }
+     printf("%d\n",s);
+    return 0;
+}
