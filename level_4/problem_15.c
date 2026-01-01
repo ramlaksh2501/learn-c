@@ -10,18 +10,18 @@ int main(){
         msb=a;
         a/=10;
         goto loop;
-    }//m/=100;
+    }m/=100;
     if(msb%2!=0){
         msb--;
     }
-    int k=msb;k*=10;printf("%d msb %d k %d m",msb,k,m);
+    int k=msb; k*=10;
  lp:   if(m!=0){
         k+=m%10;
         k*=10;
         m/=10;
         goto lp;
     }
-printf("%d",k);
+printf("%d",k/10);
 return 0;
 
 }
