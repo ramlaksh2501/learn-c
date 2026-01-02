@@ -1,10 +1,11 @@
-//we are gonna use only for statement throughout this level for looping
+//we are gonna use only while for looping throughout this level  :)
 //count from 1 to five using for 
 #include<stdio.h>
 int main(){
     int x=1;
-    for (x;x<6;x++){
+    while (x<6){
         printf("%d\n",x);
+        x++;
     }
     return 0;
 }

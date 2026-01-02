@@ -1,4 +1,4 @@
-//get a number as input and print the number of two digit perfect square numbers in that number
+//get a number as input and count how many two digit odd number are in that number 
 #include<stdio.h>
 int main(){
     int input,rev=0;
@@ -13,7 +13,7 @@ int main(){
         input+=rev%10;
         input*=10;
         input+=(rev/10)%10;
-    if(input==16||input==81||input==64||input==49||input==36||input==25){count++;}
+    if(input%2!=0){count++;}
     }printf("%d",count);
     return 0;
 }
