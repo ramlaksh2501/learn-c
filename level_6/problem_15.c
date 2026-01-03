@@ -1,5 +1,4 @@
-//get a number as input ,if the msb is odd sub msb -1,else print as it is 
-//get a number as input and swap the first and last digit and print the number 
+//get a number as input ,if the msb is odd sub msb -1,else print as it is  
 #include<stdio.h>
 int main(){
     int x,middle ,msb=0,result;

@@ -1,4 +1,4 @@
-//print the total number of single digit number 
+//print the total number of single digit prime  number 
 #include<stdio.h>
 int main(){int no=0;int i=2;
     while(i<10){int f=0;int j=2;
@@ -9,4 +9,5 @@ int main(){int no=0;int i=2;
     i++;
 }
 printf("%d",no);
+return 0;
 }

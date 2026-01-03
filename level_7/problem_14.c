@@ -1,9 +1,8 @@
 //get a number as input and swap the first and last digit and print the number 
 #include<stdio.h>
-int main(){
-    int x,middle ,first=0,last,result;
+void swap(int x){
+ int middle ,first=0,last,result;
     middle =0;
-    scanf("%d",&x);
     last=x%10;
     x/=10;
     for(x;x!=0;x=x/10){
@@ -16,5 +15,10 @@ int main(){
     result*=10;
     }result+=first;
     printf("%d",result);
+}
+int main(){
+    int x;
+    scanf("%d",&x);
+   swap(x);
     return 0;
 }
