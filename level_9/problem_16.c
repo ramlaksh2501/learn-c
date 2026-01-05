@@ -12,6 +12,6 @@ int main(){
         int s=arr[i]+arr2[i]+c;
         sum[i+1]=s%10;
         c=s/10;
-    }sum[0]=s;
+    }sum[0]=c;
     return 0;
 }
