@@ -35,7 +35,7 @@ void insert(struct stu* head,int id){int flag=0;
     scanf("%d",&head->next->sid);
     printf("maths marks:");
     scanf("%d",&head->next->maths_mark);
-    printf("maths marks:");
+    printf("science marks:");
     scanf("%d",&head->next->science_mark);
 head->next->next=t;
 }
