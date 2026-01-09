@@ -1,18 +1,19 @@
 # Learn-C
 
-These are the **codes I’ve practiced** while learning C programming, organized from beginner to advanced levels. The repository is structured into **13 levels**, each introducing progressively more complex concepts to help understand and apply C effectively.  
+These are the **codes I’ve practiced** while learning C programming, organized from beginner to advanced levels. The repository is structured into **13 levels(will be eaxpanded in the future)**, each introducing progressively more complex concepts to help understand and apply C effectively.  
 
 ## 📚 Repository Structure
 
-- **[Level 1 → Level 13](https://github.com/ramlaksh2501/learn-c/tree/main/level_1):** Each level contains exercises, examples, and concept explanations.  
-- **Concept Coverage:** Ranges from basic syntax and data types to advanced pointers, memory management, file handling, and more.  
-- **Practice Questions:** Many exercises are inspired by **Balajee Seshadri’s C course**, which focuses on understanding concepts through practical problems.  
+- **[Level 1 → Level 13](https://github.com/ramlaksh2501/learn-c/tree/main/level_1):** Each level contains exercises on different concepts.
+- **Concept Coverage:** Ranges from basic syntax and data types to advanced pointers,string manipulation and more.  
+- **Practice Questions:** All exercises are inspired by **Balajee Seshadri’s C course**, which focuses on understanding concepts through practical problems.  
 
 ## 🌟 Features
 
 - Gradually increasing difficulty for smooth learning progression.  
 - Real-world practice problems to reinforce concepts.  
-- Regular updates to include new exercises and explanations.  
+- Regular updates to include new exercises.
+- All of this is for the foundation for c programming in embedded systems
 - Collaboration welcome — contributions and suggestions are appreciated!  
 
 ## 🤝 Collaboration
