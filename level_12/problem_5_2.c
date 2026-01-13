@@ -1,14 +1,20 @@
 //an up graded version of the 50 digit multiplication
 //with less time complexity and easy to understand 
+// #include<time.h>
 #include<stdio.h>
 #include<string.h>
 #include<stdlib.h>
+
+
+/* here, do your time-consuming job */
+
+
 void getinp(char *a,char *b){
-    fgets(a,51,stdin);
-    fgets(b,51,stdin);
+    fgets(a,52,stdin);
+    fgets(b,52,stdin);
     a[strcspn(a,"\n")]='\0';
     b[strcspn(b,"\n")]='\0';
-}  
+}
 void print(char *ans){
     int flag=0;
     int size=strlen(ans);
@@ -18,7 +24,7 @@ void print(char *ans){
         else {printf("%s\n",ans+i);return;}
         
 }return;}
-char * mul(char *a,char *b,char *c) {char * temp;
+void mul(char *a,char *b,char *c) {char  temp[110]={0};
 //    c=(char *)calloc(101,sizeof(char));
    // temp=(char *)calloc(101,sizeof(char));
    // *c='0';
@@ -35,7 +41,7 @@ char * mul(char *a,char *b,char *c) {char * temp;
   for (int j=size2;j>=0;j--){// print(b+j);
     int index=99-track;
     int left=b[j]-48;
-  temp=(char *)calloc(101,sizeof(char));
+  //temp=(char *)calloc(101,sizeof(char));
        for(int l=index+1;l<=99;l++){temp[l]='0';
    // printf("j:%d index:%d left:%d\n",j,index,left);
    // return;}
@@ -49,7 +55,7 @@ char * mul(char *a,char *b,char *c) {char * temp;
       carry=res/10;
       //printf("index%d\n",index);
       index--;
-  }track++;//index--;
+        }track++;//index--;
   temp[index]=carry+48;index--;
   
   if(index>0){
@@ -61,13 +67,14 @@ char * mul(char *a,char *b,char *c) {char * temp;
   //  print(temp);
   }int flag=0;
     int size=strlen(temp);
-    char *t=temp;
-    for (int z=0;z<size;z++){
-        if(flag==0 && temp[z]==48){
-        }
-        else {temp=temp+z;break;}
+    // char *t=temp;
+    // for (int z=0;z<size;z++){
+        // if(flag==0 && temp[z]==48){
+        // }
+        // else {temp=temp+z;
+        //   break;}
         
-}
+
 
   int x=strlen(temp)-1;
     int y=strlen(c)-1;
@@ -88,26 +95,32 @@ char * mul(char *a,char *b,char *c) {char * temp;
         carry1=(sum/10);
     y--;
 x--;}
-c[0]=carry1+48;
+c[0]=carry1+48;}
 //printf("%c %c \n",c[0],c[1]);
-free(t);
-}
-return c;
+//free(t);
+//return c;
 //*temp='\0';
 }
 
 
 int main(){
+  // clock_t begin = clock();
     char answer[150];
     char input[100];
     char inpp[100];
     getinp(input,inpp);
     char *ans;
-    ans =mul(input,inpp,answer);
+    mul(input,inpp,answer);
+    //ans =mul(input,inpp,answer);
     // print(input);
     // print(inpp);
- print(ans);
+ print(answer);
+//  clock_t end = clock();
+// double time_spent = (double)(end - begin) / CLOCKS_PER_SEC;
+// printf("%f",time_spent);
+// //printf("")
     return 0;
 }
 //passed 7 out of 10 edge cases for 50 digit multiplication 
 //needs optimization 
+//passes 8 cases outta 10
