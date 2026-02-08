@@ -88,7 +88,7 @@ int main(){
     add(inp,t,answer);
     //}
      t=recol(t,answer);
-         print(answer);  
+        // print(answer);  
     }
     printf("answer:");
     print(answer);

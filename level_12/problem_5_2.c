@@ -73,9 +73,6 @@ void mul(char *a,char *b,char *c) {char  temp[110]={0};
         // }
         // else {temp=temp+z;
         //   break;}
-        
-
-
   int x=strlen(temp)-1;
     int y=strlen(c)-1;
     int big=x;
@@ -90,17 +87,17 @@ void mul(char *a,char *b,char *c) {char  temp[110]={0};
         if(x>=0 && temp[x]>=48 && temp[x]<=57) { o=temp[x]-48;}
         if(y>=0 && c[y]>=48 && c[y]<=57){ p=c[y]-48;}
     // print(c);
-       int sum=p+o+carry1;
-       c[big+1]=(sum%10)+48;
-        carry1=(sum/10);
-    y--;
-x--;}
-c[0]=carry1+48;}
+       
 //printf("%c %c \n",c[0],c[1]);
 //free(t);
 //return c;
 //*temp='\0';
-}
+int sum=p+o+carry1;
+       c[big+1]=(sum%10)+48;
+        carry1=(sum/10);
+    y--;
+x--;}
+c[0]=carry1+48;}}
 
 
 int main(){
