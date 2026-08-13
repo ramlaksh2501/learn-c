@@ -1,6 +1,6 @@
 //6 players need to roll dice at the same time
 //implement with the single routine called by 6 threads
-//get the return value 
+//get the return value from each thread
 
 #include<stdio.h> //for print and 
 #include<pthread.h> //for thread functions
@@ -21,11 +21,17 @@ void * roll_dice(){
 
 int main(int argv,char ** argc){
 	printf("rolling.....\n");
-	int * value; //store the dice value's address
+	int * value[6]; //store the dice value's address
 	usleep(999999);
-	pthread_t dice;
-	pthread_create(&dice,NULL,roll_dice,NULL);
-	pthread_join(dice,(void **)&value);//we pass the address of the pointer so the value of the pointer is the address of the dice value so that we derefrence the value of the pointer(address of dice value) to get the dice value
-	printf("you got:%d\n",*value);
+	pthread_t dice[6];
+	for(int i=0;i<7;i++){
+		pthread_create(&dice[i],NULL,roll_dice,NULL);
+	}
+	for(int i=0;i<6;i++){
+	pthread_join(dice[i],(void **)&value+i);//we pass the address of the pointer so the value of the pointer is the address of the dice value so that we derefrence the value of the pointer(address of dice value) to get the dice value
+	}
+	for(int i=0;i<6;i++){
+	printf("player %d got:%d\n",i,*value[i]);
+	}
 	return 0;
 	}
