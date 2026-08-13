@@ -34,5 +34,9 @@ int main(int argv,char ** argc){
 	for(int i=0;i<6;i++){
 	printf("player %d got:%d\n",i,*value[i]);
 	}
+	for(int i=0;i<6;i++){
+		free(value[i]);//never forget free , think i always do
+		}
+
 	return 0;
 	}
