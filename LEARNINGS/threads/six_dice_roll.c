@@ -11,7 +11,7 @@ void * roll_dice(){
 	//return the address of the value of the dice we get 
 	//need to allocate the memory dynamically because the local values are not retained as the function ends the stack will be pointing to a new set of values (stack only has local variable)(after function returned it cannot be retained so if we send that address then it will result in a segfault)
 	int *dice=malloc(sizeof(int));
-	srandom(time(NULL));
+	srandom(random());
 	*dice=(random()%6)+1;
 //	int di=(random()%6)+1;
 //	printf("you got:%d\n",res);
@@ -20,6 +20,7 @@ void * roll_dice(){
 }
 
 int main(int argv,char ** argc){
+	srandom(time(NULL));
 	printf("rolling.....\n");
 	int * value[6]; //store the dice value's address
 	usleep(999999);
