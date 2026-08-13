@@ -1,5 +1,6 @@
-//gonna create a program to roll a dice and get a value in between 1 to 6 and gonna use thread (single thread) funcitons to innitiate the process of rolling dice 
-
+//6 players need to roll dice at the same time
+//implement with the single routine called by 6 threads
+//get the return value 
 
 #include<stdio.h> //for print and 
 #include<pthread.h> //for thread functions
@@ -26,6 +27,5 @@ int main(int argv,char ** argc){
 	pthread_create(&dice,NULL,roll_dice,NULL);
 	pthread_join(dice,(void **)&value);//we pass the address of the pointer so the value of the pointer is the address of the dice value so that we derefrence the value of the pointer(address of dice value) to get the dice value
 	printf("you got:%d\n",*value);
-	free(value);//never forget to free the value you allocated in the heap, i just remembered
 	return 0;
 	}
