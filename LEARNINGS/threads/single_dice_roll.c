@@ -6,7 +6,7 @@
 #include<time.h> // to provide a unique key to  random function seed value via the time function
 #include<stdlib.h> //to get the random funciton
 #include<unistd.h> //sleep
-void * roll_dice(){
+void * roll_dice(void *args){
 	//return the address of the value of the dice we get 
 	//need to allocate the memory dynamically because the local values are not retained as the function ends the stack will be pointing to a new set of values (stack only has local variable)(after function returned it cannot be retained so if we send that address then it will result in a segfault)
 	int *dice=malloc(sizeof(int));
