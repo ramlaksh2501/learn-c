@@ -55,6 +55,7 @@ int convert_str_to_num(char *num){
 
 
 int main(int argv,char ** argc){
+	srandom(time(NULL));
 	if(argv!=2){
 		printf("usage:<no_of_players> \nerror:input required\n");
 		return 0; 
