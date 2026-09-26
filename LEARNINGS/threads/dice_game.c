@@ -26,13 +26,13 @@ pthread_barrier_t wait_players;
 
 void * roll_dice(void* player ){
 	pthread_barrier_wait(&wait_players);
-	usleep(200000);
+	//usleep(200000);
         ((Player*)player)->score=(random()%6)+1;
 	//printf("rolled dice\n");
 	pthread_barrier_wait(&wait_players);
 	pthread_barrier_wait(&wait_players);
 	printf("player %d scored:%d  and  %s\n",
-	((Player*)player)->id,((Player*)player)->score,((Player*)player)->status ? "won" : "lost");
+	((Player*)player)->id+1,((Player*)player)->score,((Player*)player)->status ? "won" : "lost");
 	pthread_barrier_wait(&wait_players);
 	return NULL;
 
@@ -79,7 +79,7 @@ int main(int argv,char ** argc){
 	pthread_barrier_wait(&wait_players);
 	//printf("waiting for everyone to start\n");
 	pthread_barrier_wait(&wait_players);
-	printf("rolling.........\n");
+//	printf("rolling.........\n");
 	int highest=0;
 	for(int i=0;i<players;i++){
 			if(player[i]->score > highest){
